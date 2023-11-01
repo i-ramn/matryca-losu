@@ -1,4 +1,4 @@
-import { HeaderNav, HeaderNavProps } from "./HeaderNav";
+import { HeaderNav, HeaderNavProps } from "@/components/Header/HeaderNav";
 
 const navlinks: HeaderNavProps[] = [
   { href: "/", label: "home" },
@@ -7,7 +7,7 @@ const navlinks: HeaderNavProps[] = [
 
 export const Header = (): JSX.Element => {
   return (
-    <header>
+    <header className="bg-purple border-solid rounded max-w-headerWidth w-4/5 m-auto flex gap-4">
       <HeaderNav navLinks={navlinks} />
     </header>
   );
