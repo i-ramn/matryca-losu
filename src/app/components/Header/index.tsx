@@ -10,7 +10,7 @@ const navlinks: HeaderNavProps[] = [
 
 export const Header = (): JSX.Element => {
   return (
-    <header className="bg-purple border-solid rounded-full max-w-headerWidth w-4/5 m-auto flex gap-4 items-center px-5">
+    <header className="bg-purple border-solid rounded-full max-w-ъ w-4/5 m-auto flex gap-4 items-center px-[10vh] justify-between">
       <HeaderNav navLinks={navlinks} />
     </header>
   );

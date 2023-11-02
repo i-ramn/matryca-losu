@@ -13,3 +13,9 @@
     @apply text-2xl bg-clip-text text-transparent;
   }
 }
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  width: 65%;
+}

@@ -28,19 +28,21 @@ export const HeaderNav: FC<NavLinks> = ({ navLinks }) => {
       <Link href="/" className="cursor-pointer">
         <Image width={100} height={100} src={Logo} alt="logo" />
       </Link>
-      {navLinks.map((link) => {
-        const isActive = pathname === link.href;
+      <nav className={styles.navigation}>
+        {navLinks.map((link) => {
+          const isActive = pathname === link.href;
 
-        return (
-          <Link
-            key={link.href}
-            className={isActive ? styles.activeLink : styles.link}
-            href={link.href}
-          >
-            {intl.formatMessage({ id: `navigation.${link.label}` as MessageIds })}
-          </Link>
-        );
-      })}
+          return (
+            <Link
+              key={link.href}
+              className={isActive ? styles.activeLink : styles.link}
+              href={link.href}
+            >
+              {intl.formatMessage({ id: `navigation.${link.label}` as MessageIds })}
+            </Link>
+          );
+        })}
+      </nav>
       <DefaultButton messageId="navigation.calculation" />
     </>
   );
