@@ -1,4 +1,4 @@
-import { flatten } from '@/helpers/fleatten';
+import { flatten } from '@/helpers/flatten';
 
 import pl from './pl.json';
 

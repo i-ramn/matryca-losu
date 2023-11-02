@@ -1,10 +1,10 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
-import { Header } from './components/Header';
+import { Inder } from 'next/font/google';
+import { Header } from '@/components/Header';
 import { LanguageProvider } from '@/contexts/intlContext';
 import './globals.css';
 
-const inter = Inter({ subsets: ['latin'] });
+const inder = Inder({ subsets: ['latin'], weight: ['400'], style: 'normal' });
 
 export const metadata: Metadata = {
   title: 'Matryca losu',
@@ -14,12 +14,12 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-        <body className={inter.className}>
+      <body className={inder.className}>
         <LanguageProvider>
           <Header />
           {children}
-          </LanguageProvider>
-        </body>
+        </LanguageProvider>
+      </body>
     </html>
   );
 }

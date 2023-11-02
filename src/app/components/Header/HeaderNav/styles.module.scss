@@ -1,0 +1,15 @@
+.activeLink {
+  background: var(--main-gradient);
+  border-bottom: 1px solid;
+  border-image-source: var(--main-gradient);
+  @apply text-2xl bg-clip-text text-transparent;
+}
+
+.link {
+  @apply text-zinc-50 text-2xl leading-8;
+
+  &:hover {
+    background: var(--main-gradient);
+    @apply text-2xl bg-clip-text text-transparent;
+  }
+}
