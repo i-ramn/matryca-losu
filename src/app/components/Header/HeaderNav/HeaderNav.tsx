@@ -8,8 +8,9 @@ import Hamburger from 'hamburger-react';
 
 import { DefaultButton } from '@/components/Buttons/DefaultButton';
 import { useWindowSize } from '@/hooks/useWindowSize';
+import { CloseButton } from '@/components/Buttons/CloseButton';
 import { MessageIds } from '../../../../../i18n';
-import Logo from '../../../../../public/logo.svg';
+import Logo from '../../../../../public/icons/logo.svg';
 import styles from './styles.module.scss';
 
 export interface HeaderNavProps {
@@ -41,14 +42,19 @@ export const HeaderNav: FC<NavLinks> = ({ navLinks }) => {
         <Link href="/" className="cursor-pointer">
           <Image className="h-20 w-20 lg:h-24 lg:w-24" src={Logo} alt="logo" />
         </Link>
+
         <nav className={isMenuOpened ? styles.mobileMenu : styles.menu}>
+          <CloseButton className="absolute right-3 top-3 md:hidden" onClick={toggleBurger} />
+
           {navLinks.map((link) => {
             const isActive = pathname === link.href;
 
             return (
               <Link
                 key={link.href}
-                className={isActive ? styles.activeLink : styles.link}
+                className={`${
+                  isActive ? styles.activeLink : styles.link
+                } border-b border-zinc-500 p-4 md:border-0 md:p-0`}
                 href={link.href}
               >
                 {intl.formatMessage({ id: `navigation.${link.label}` as MessageIds })}
@@ -61,12 +67,7 @@ export const HeaderNav: FC<NavLinks> = ({ navLinks }) => {
           <Hamburger toggled={false} onToggle={toggleBurger} color="var(--main-gradient)" />
         </div>
       </div>
-      {isMenuOpened && (
-        <div
-          onClick={toggleBurger}
-          className="fixed bottom-0 left-0 top-0 z-10 h-full w-full bg-black opacity-70"
-        />
-      )}
+      {isMenuOpened && <div onClick={toggleBurger} className={styles.overlay} />}
     </>
   );
 };
