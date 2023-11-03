@@ -17,13 +17,20 @@ const config: Config = {
         headerWidth: '1700px',
       },
       colors: {
-        purple: ' #270B3E',
-        orangeGradientStart: '#FF2927',
-        orangeGradientMid: '#FD6530',
-        orangeGradientTo: '#FFC122',
+        purple: '#270B3E',
       },
       translate: {
         0.3: '0.3px',
+      },
+      container: {
+        center: true,
+      },
+      screens: {
+        '2xl': '1440px',
+      },
+      fontFamily: {
+        inter: ['var(--font-inter)'],
+        inder: ['var(--font-inder)'],
       },
     },
   },

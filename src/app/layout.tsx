@@ -1,10 +1,8 @@
 import type { Metadata } from 'next';
-import { Inder } from 'next/font/google';
+import { INTER, INDER } from '@/constants/fonts';
 import { Header } from '@/components/Header';
 import { LanguageProvider } from '@/contexts/intlContext';
 import './globals.css';
-
-const inder = Inder({ subsets: ['latin'], weight: ['400'], style: 'normal' });
 
 export const metadata: Metadata = {
   title: 'Matryca losu',
@@ -13,8 +11,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
-      <body className={inder.className}>
+    <html lang="en" className={`${INTER.variable} ${INDER.variable}`}>
+      <body className="md:text-md text-2xl">
         <LanguageProvider>
           <Header />
           {children}

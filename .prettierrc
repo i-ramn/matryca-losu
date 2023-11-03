@@ -1,4 +1,4 @@
- {
+{
   "printWidth": 100,
   "tabWidth": 2,
   "useTabs": false,
@@ -9,5 +9,6 @@
   "bracketSameLine": false,
   "arrowParens": "always",
   "quoteProps": "as-needed",
-  "endOfLine": "lf"
+  "endOfLine": "lf",
+  "plugins": ["prettier-plugin-tailwindcss"]
 }

@@ -1,18 +1,30 @@
-import { FC } from 'react';
+import { FC, ButtonHTMLAttributes } from 'react';
 import { FormattedMessage } from 'react-intl';
-import { MessageIds } from '../../../../i18n';
 
-interface DefaultButtonProps {
+import { MessageIds } from '../../../../i18n';
+import styles from './styles.module.scss';
+
+interface DefaultButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   onClick?: () => void;
   messageId: MessageIds | undefined;
+  variant: 'default' | 'nav' | 'reversed';
 }
 
-export const DefaultButton: FC<DefaultButtonProps> = ({ onClick, messageId }) => {
+const variants = {
+  default: styles.navButton,
+  nav: styles.navButton,
+  reversed: 'reversed',
+};
+
+export const DefaultButton: FC<DefaultButtonProps> = ({
+  onClick,
+  messageId,
+  variant = 'default',
+  className,
+  ...rest
+}) => {
   return (
-    <button
-      className="rounded-full bg-white hover:bg-slate-400 transition-all active:bg-slate-500 active:animate-pulse active:translate-y-0.3 px-2 text-gray-800"
-      onClick={onClick}
-    >
+    <button className={`${className} ${variants[variant]}`} onClick={onClick} {...rest}>
       <FormattedMessage id={messageId} />
     </button>
   );
