@@ -1,0 +1,59 @@
+.overlay {
+  @apply fixed bottom-0 left-0 top-0 z-10 h-full w-full bg-black opacity-70;
+}
+.wrapper {
+  @apply container flex items-center justify-between px-4;
+}
+
+.activeLink {
+  background: var(--main-gradient);
+  @apply border-b border-zinc-500 bg-clip-text text-lg text-transparent lg:text-2xl;
+}
+
+.link {
+  @apply text-lg text-zinc-50 lg:text-2xl;
+
+  &:hover {
+    background: var(--main-gradient);
+    @apply bg-clip-text text-lg text-transparent lg:text-2xl;
+  }
+}
+
+.menu {
+  @apply hidden w-[65%] justify-between transition-[0.2s] md:flex xl:w-[55%];
+}
+
+.mobileMenu {
+  @apply absolute bottom-0 right-0 top-0 z-20 flex h-full w-2/4 flex-col bg-purple px-3 py-10 lg:w-1/5;
+  animation: mobileMenuFade 0.3s ease forwards;
+}
+
+.mobileMenuClose {
+  animation: mobileMenuCloseFade 0.3s ease forwards;
+}
+
+.logo {
+  @apply h-20 w-20 lg:h-24 lg:w-24;
+}
+
+@keyframes mobileMenuFade {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes mobileMenuCloseFade {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}

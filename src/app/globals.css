@@ -35,6 +35,7 @@ body {
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
+  background: var(--bg, #fff);
 }
 
 ul[class],
@@ -60,4 +61,12 @@ button,
 textarea,
 select {
   font: inherit;
+}
+
+:root {
+  --main-gradient: linear-gradient(237deg, #ff2927 20.42%, #fd6530 44.43%, #ffc122 86.27%);
+}
+
+body {
+  @apply font-inder text-sm lg:text-2xl;
 }
