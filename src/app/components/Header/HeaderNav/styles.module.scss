@@ -2,7 +2,7 @@
   @apply fixed bottom-0 left-0 top-0 z-10 h-full w-full bg-black opacity-70;
 }
 .wrapper {
-  @apply container flex items-center justify-between px-4;
+  @apply container flex items-center justify-between;
 }
 
 .activeLink {

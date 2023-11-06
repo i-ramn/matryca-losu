@@ -9,7 +9,7 @@ export const INDER = Inder({
 
 export const INTER = Inter({
   subsets: ['latin'],
-  weight: '400',
+  weight: ['400', '600'],
   style: 'normal',
   variable: '--font-inter',
 });

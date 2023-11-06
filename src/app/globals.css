@@ -68,5 +68,9 @@ select {
 }
 
 body {
-  @apply font-inder text-sm lg:text-2xl;
+  @apply font-inder text-sm lg:text-xl;
+}
+
+h1 {
+  @apply font-inter text-2xl font-semibold leading-[130%] lg:text-3,5xl;
 }

@@ -4,5 +4,11 @@
   "navigation.AboutTheMethod": "O metodzie",
   "navigation.blog": "Bloga",
   "navigation.buy": "Kupić",
-  "button.enter": "Wejść"
+  "button.enter": "Wejść",
+  "home.calculation": "Obliczanie macierzy losu ze szczegółowym wyjaśnieniem",
+  "home.article": "Bez wiedzy o całości talentów i danych, które otrzymaliśmy od urodzenia, życie jest jak statek zagubiony na pełnym morzu. Matrycowa metoda daty po dacie urodzenia, niczym Latarnia wskazująca drogę potrzebującym, pomaga Wędrowcowi znaleźć cel w życiu i odkryć jego przeznaczenie.",
+  "home.article.p2": "A zgodność zgodnie z matrycą przeznaczenia pomoże Ci znaleźć idealnego partnera i uniknąć trudności w związkach.",
+  "button.calculate-online": "Oblicz macierz online",
+  "buttonn.calculate-complience": "Oblicz zgodność",
+  "button.calculate-child": "Oblicz macierz potomną"
 }

@@ -7,11 +7,11 @@ import styles from './styles.module.scss';
 interface DefaultButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   onClick?: () => void;
   messageId: MessageIds | undefined;
-  variant: 'default' | 'nav' | 'reversed';
+  variant?: 'default' | 'nav' | 'reversed';
 }
 
 const variants = {
-  default: styles.navButton,
+  default: styles.defaultButton,
   nav: styles.navButton,
   reversed: 'reversed',
 };

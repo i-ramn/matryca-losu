@@ -12,6 +12,7 @@ const config: Config = {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'home-back': "url('/public/images/background.png')",
       },
       maxWidth: {
         headerWidth: '1700px',
@@ -24,6 +25,7 @@ const config: Config = {
       },
       container: {
         center: true,
+        padding: '1rem',
       },
       screens: {
         '2xl': '1440px',
@@ -31,6 +33,12 @@ const config: Config = {
       fontFamily: {
         inter: ['var(--font-inter)'],
         inder: ['var(--font-inder)'],
+      },
+      fontSize: {
+        /* 
+        46px, 2.875rem
+        */
+        '3,5xl': '2.875rem',
       },
     },
   },
