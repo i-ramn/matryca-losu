@@ -1,21 +1,15 @@
 'use client';
-import { DefaultButton } from '@/app/components/Buttons/DefaultButton';
-import Link from 'next/link';
 import { FC } from 'react';
 import { FormattedMessage } from 'react-intl';
+import Link from 'next/link';
+
+import { DefaultButton } from '@/app/components/Buttons/DefaultButton';
 import { buttonsData } from './buttonsData';
-import Image from 'next/image';
-import Back from '../../../../public/images/background.png';
 
 export const TopSection: FC = () => {
   return (
     <>
-      <section className="relative flex max-h-[800px] flex-col justify-between lg:h-[90vh] xl:min-h-[800px]">
-        <Image
-          src={Back}
-          alt="bg image"
-          className="absolute top-8 -z-10 h-[40%] sm:h-[60%] md:top-0 md:h-full"
-        />
+      <section className="bg-home-people flex w-full bg-contain bg-no-repeat md:bg-cover md:bg-center xl:min-h-[800px]">
         <div className="container flex flex-col items-center pt-7 md:items-start lg:pt-24">
           <h1 className="mb-44 max-w-[80%] text-center text-purple md:mb-14 md:max-w-xl md:text-left">
             <FormattedMessage id="home.calculation" />

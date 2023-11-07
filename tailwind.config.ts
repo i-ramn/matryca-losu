@@ -12,7 +12,7 @@ const config: Config = {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-        'home-back': "url('/public/images/background.png')",
+        'home-people': 'url(/images/background-xl.png)',
       },
       maxWidth: {
         headerWidth: '1700px',
@@ -25,7 +25,10 @@ const config: Config = {
       },
       container: {
         center: true,
-        padding: '1rem',
+        padding: {
+          DEFAULT: '2.5rem',
+          sm: '1rem',
+        },
       },
       screens: {
         '2xl': '1440px',
