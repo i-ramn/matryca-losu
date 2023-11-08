@@ -19,6 +19,7 @@ const config: Config = {
       },
       colors: {
         purple: '#270B3E',
+        lightGray: '#D8D8D8',
       },
       translate: {
         0.3: '0.3px',

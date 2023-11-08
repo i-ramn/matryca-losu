@@ -74,3 +74,12 @@ body {
 h1 {
   @apply font-inter text-2xl font-semibold leading-[130%] lg:text-3,5xl;
 }
+h2 {
+  @apply font-inter text-sm font-semibold leading-7 lg:text-3xl lg:leading-10;
+}
+p {
+  @apply font-inter text-[14px] leading-5 lg:text-sm lg:leading-7;
+}
+label {
+  @apply text-xs lg:text-sm;
+}

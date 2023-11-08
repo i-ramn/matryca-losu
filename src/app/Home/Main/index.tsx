@@ -3,13 +3,13 @@ import { FC } from 'react';
 import { FormattedMessage } from 'react-intl';
 import Link from 'next/link';
 
-import { DefaultButton } from '@/app/components/Buttons/DefaultButton';
+import { DefaultButton } from '@/components/Buttons/DefaultButton';
 import { buttonsData } from './buttonsData';
 
 export const TopSection: FC = () => {
   return (
     <>
-      <section className="bg-home-people flex w-full bg-contain bg-no-repeat md:bg-cover md:bg-center xl:min-h-[800px]">
+      <section className="flex w-full bg-home-people bg-contain bg-no-repeat md:bg-cover md:bg-center xl:min-h-[800px]">
         <div className="container flex flex-col items-center pt-7 md:items-start lg:pt-24">
           <h1 className="mb-44 max-w-[80%] text-center text-purple md:mb-14 md:max-w-xl md:text-left">
             <FormattedMessage id="home.calculation" />
