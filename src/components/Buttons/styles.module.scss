@@ -29,3 +29,7 @@
     @apply translate-y-[1px] bg-black opacity-75;
   }
 }
+
+.md {
+  @apply h-12 w-[168px] py-0 font-normal md:text-base;
+}

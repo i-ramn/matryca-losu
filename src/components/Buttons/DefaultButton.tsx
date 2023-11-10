@@ -1,13 +1,14 @@
 import { FC, ButtonHTMLAttributes } from 'react';
 import { FormattedMessage } from 'react-intl';
 
-import { MessageIds } from '../../../i18n';
+import { MessageIds } from '../../types/i18n';
 import styles from './styles.module.scss';
 
 interface DefaultButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   onClick?: () => void;
   messageId: MessageIds | undefined;
   variant?: 'default' | 'nav' | 'reversed';
+  size: 'lg' | 'md' | 'sm';
 }
 
 const variants = {
@@ -21,10 +22,15 @@ export const DefaultButton: FC<DefaultButtonProps> = ({
   messageId,
   variant = 'default',
   className,
+  size,
   ...rest
 }) => {
   return (
-    <button className={`${className} ${variants[variant]}`} onClick={onClick} {...rest}>
+    <button
+      className={`${className} ${variants[variant]} ${styles[size]}`}
+      onClick={onClick}
+      {...rest}
+    >
       <FormattedMessage id={messageId} />
     </button>
   );

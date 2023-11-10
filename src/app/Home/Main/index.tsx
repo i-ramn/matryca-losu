@@ -24,11 +24,11 @@ export const TopSection: FC = () => {
         </div>
       </section>
       <div className="container flex justify-end">
-        <article className="hidden w-2/3 self-end text-end text-sm text-purple md:flex lg:text-2xl">
+        <article className="hidden w-2/3 self-end text-end text-sm text-purple md:flex md:text-lg lg:text-2xl">
           <FormattedMessage id="home.article" />
           <FormattedMessage id="home.article.p2" />
         </article>
-        <article className="flex text-sm text-purple md:hidden">
+        <article className="flex text-sm text-purple md:hidden lg:text-lg">
           <FormattedMessage id="home.article.p2" />
         </article>
       </div>

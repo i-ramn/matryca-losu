@@ -1,4 +1,4 @@
-import { FlattenKeys } from '../../i18n';
+import { FlattenKeys } from '../types/i18n';
 import { isPlainObject } from '@/helpers/isPlainObject.util';
 
 export function flatten<T extends Record<string, unknown>>(

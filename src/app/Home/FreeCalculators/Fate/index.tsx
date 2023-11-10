@@ -1,19 +1,31 @@
 'use client';
-import { FormattedMessage, useIntl } from 'react-intl';
+import { FormattedMessage } from 'react-intl';
 import { useFormik } from 'formik';
+import { useCallback } from 'react';
 
 import { DefaultButton } from '@/components/Buttons/DefaultButton';
 import { DefaultInput } from '@/components/Input';
-import { FormValues, createInitialValues } from '@/helpers/createInitialValues';
-import { useFormValues } from './useFormValues';
+import { useFateForm } from './useFateForm';
+import { useTranslate } from '@/hooks/useTranslate';
+import { MessageIds } from '@/types/i18n';
 
 export const FateCalculator = () => {
-  const { formValues, initialValues } = useFormValues();
+  const { formValues, initialValues } = useFateForm();
+  const { handleTranslate } = useTranslate();
 
   const formik = useFormik({
     initialValues,
     onSubmit: (val) => console.log(val),
   });
+
+  const handleDropdownSelect = useCallback((fieldName: string, selectedValue: string) => {
+    formik.handleChange({
+      target: {
+        name: fieldName,
+        value: selectedValue,
+      },
+    });
+  }, []);
 
   return (
     <div>
@@ -23,19 +35,25 @@ export const FateCalculator = () => {
       <p>
         <FormattedMessage id="home.free-calculator.fate.description" />
       </p>
-      <form onSubmit={formik.handleSubmit} className="grid grid-cols-2 gap-x-28 gap-y-3">
-        {formValues.map(({ name, placeholder, type }) => (
+      <form
+        onSubmit={formik.handleSubmit}
+        className="grid w-full grid-cols-1 gap-x-28 md:grid-cols-2 md:gap-y-3"
+      >
+        {formValues.map(({ name, placeholder, type, dropdown }) => (
           <DefaultInput
             key={name}
             value={formik.values[name]}
             name={name}
-            label={name}
+            label={handleTranslate(name as MessageIds)}
             onChange={formik.handleChange}
             placeholder={placeholder}
             type={type}
+            dropdown={Array.isArray(dropdown)}
+            dropdownData={dropdown}
+            onDropdownSelect={(selectedValue) => handleDropdownSelect(name, selectedValue)}
           />
         ))}
-        <DefaultButton messageId="navigation.blog" type="submit" />
+        <DefaultButton size="md" messageId="button.enter" type="submit" className="mt-6" />
       </form>
     </div>
   );

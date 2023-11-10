@@ -1,5 +1,5 @@
 import { useIntl } from 'react-intl';
-import { MessageIds } from '../../i18n';
+import { MessageIds } from '../types/i18n';
 import { useCallback } from 'react';
 
 export const useTranslate = () => {

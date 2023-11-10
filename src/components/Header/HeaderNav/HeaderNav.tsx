@@ -9,7 +9,7 @@ import Hamburger from 'hamburger-react';
 import { DefaultButton } from '@/components/Buttons/DefaultButton';
 import { useWindowSize } from '@/hooks/useWindowSize';
 import { CloseButton } from '@/components/Buttons/CloseButton';
-import { MessageIds } from '../../../../i18n';
+import { MessageIds } from '../../../types/i18n';
 import Logo from '@/public/icons/logo.svg';
 import styles from './styles.module.scss';
 

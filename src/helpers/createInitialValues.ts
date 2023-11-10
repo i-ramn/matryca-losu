@@ -1,4 +1,5 @@
 import { InputHTMLAttributes, HTMLInputTypeAttribute } from 'react';
+import { MessageIds } from '../types/i18n';
 
 type InitialValues = {
   [key: string]: string;
@@ -11,7 +12,7 @@ type InnputType = InputHTMLAttributes<HTMLInputElement> & {
 export type FormValues = {
   name: string;
   placeholder: string;
-  dropdown?: string[];
+  dropdown?: string[] | MessageIds[];
   value?: string;
   type?: HTMLInputTypeAttribute;
 };

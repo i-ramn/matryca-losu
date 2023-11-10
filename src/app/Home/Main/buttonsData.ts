@@ -1,5 +1,5 @@
 import { RoutesEnum } from '@/types/routes';
-import { MessageIds } from '../../../../i18n';
+import { MessageIds } from '../../../types/i18n';
 
 interface ButtonsData {
   id: MessageIds | undefined;
