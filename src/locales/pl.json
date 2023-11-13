@@ -33,5 +33,14 @@
   "home.about.description.p4": "Codziennie tysiące osób korzysta z naszego kalkulatora, pracując nad sobą i dążąc do pełni szczęśliwego i świadomego życia. Naszym celem jest upowszechnienie tych cennych informacji i pomoc ludziom w odkrywaniu odpowiedzi na ich pytania oraz odnajdywaniu głównego celu życia. ",
   "button.calculate-online": "Oblicz macierz online",
   "buttonn.calculate-complience": "Oblicz zgodność",
-  "button.calculate-child": "Oblicz macierz potomną"
+  "button.calculate-child": "Oblicz macierz potomną",
+  "advantages.why-us": "Potrzebujesz matrycy, jeśli:",
+  "advantages.why-us.p1": "Chciałbyś zacząć nową karierę",
+  "advantages.why-us.p2": "Chcesz uwolnić swój potencjał",
+  "advantages.why-us.p3": "Uważasz że zasługujesz lepsze życie",
+  "advantages.why-us.p4": "Poszukujesz swojego celu",
+  "advantages.why-us.p5": "Zapomniałeś jak się cieszyć życiem",
+  "advantages.why-us.p6": "Chcesz odkryć swoje talenty",
+  "advantages.why-us.p7": "Brakuje pomysłów jak zrealizować marzenia",
+  "advantages.why-us.p8": "Brakuje tobie pewności siebie"
 }
