@@ -77,6 +77,9 @@ h1 {
 h2 {
   @apply font-inter text-sm font-semibold leading-7 lg:text-3xl lg:leading-10;
 }
+h4 {
+  @apply text-sm font-bold leading-7 md:font-inter;
+}
 p {
   @apply font-inter text-sm leading-5 md:text-xl lg:leading-7;
 }

@@ -7,7 +7,7 @@ import { advantages } from './data';
 
 export const Advantages = () => {
   return (
-    <section className="pt-16 text-purple">
+    <section className="mb-16 pt-16 text-purple">
       <h2 className="mb-14 text-center uppercase">
         <FormattedMessage id="advantages.why-us" />
       </h2>

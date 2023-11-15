@@ -1,7 +1,8 @@
 import { TopSection } from '@/app/Home/Main';
 import { FreeCalulators } from '@/app/Home/FreeCalculators';
-import { About } from './Home/FreeCalculators/About';
+import { About } from './Home/About';
 import { Advantages } from './Home/Adnvantages';
+import { MoreAbout } from './Home/MoreAbout';
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <FreeCalulators />
       <About />
       <Advantages />
+      <MoreAbout />
     </>
   );
 }
