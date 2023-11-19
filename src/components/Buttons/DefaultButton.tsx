@@ -27,7 +27,7 @@ export const DefaultButton: FC<DefaultButtonProps> = ({
 }) => {
   return (
     <button
-      className={`${className} ${variants[variant]} ${styles[size]}`}
+      className={`${className} ${variants[variant]} ${styles[size]} text-red-600`}
       onClick={onClick}
       {...rest}
     >

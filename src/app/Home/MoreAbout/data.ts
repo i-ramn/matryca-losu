@@ -1,16 +1,14 @@
 import { MessageIds } from '@/types/i18n';
 
 interface MoreAboutData {
-  imgstyle: string;
-  containerStyle: string;
+  imgstyle?: string;
+  containerStyle?: string;
   subtitle: MessageIds;
   text: MessageIds;
 }
 
 export const moreAboutData: MoreAboutData[] = [
   {
-    imgstyle: '',
-    containerStyle: '',
     subtitle: 'more.about.p1.subtitle',
     text: 'more.about.p1',
   },
@@ -34,7 +32,6 @@ export const moreAboutData: MoreAboutData[] = [
   },
   {
     imgstyle: 'rotate-[-90deg]',
-    containerStyle: '',
     subtitle: 'more.about.p5.subtitle',
     text: 'more.about.p5',
   },

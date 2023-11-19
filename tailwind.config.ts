@@ -14,6 +14,7 @@ const config: Config = {
         'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
         'home-people': 'url(/images/background-xl.png)',
         'more-about-background': 'url(/images/background-union.png)',
+        phone: 'url(/images/phone.png)',
       },
       maxWidth: {
         headerWidth: '1700px',
@@ -21,6 +22,7 @@ const config: Config = {
       colors: {
         purple: '#270B3E',
         lightGray: '#D8D8D8',
+        lightGray2: '#F2F2F2',
       },
       translate: {
         0.3: '0.3px',

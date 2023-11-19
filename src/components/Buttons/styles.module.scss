@@ -16,7 +16,7 @@
 }
 
 .defaultButton {
-  @apply w-[261px] rounded-full py-[18px] font-inter text-lg  font-semibold text-white lg:w-[348px] lg:py-5 lg:text-2xl;
+  @apply w-[261px] rounded-full py-[18px] font-inter text-lg font-semibold text-white lg:w-[348px] lg:py-5 lg:text-2xl;
   /* background-color: theme('colors.purple'); */
   background: theme('colors.purple');
 
@@ -32,4 +32,8 @@
 
 .md {
   @apply h-12 w-[168px] py-0 font-normal md:text-base;
+}
+
+.sm {
+  @apply h-8 min-w-[225px] p-0 px-2 text-xs font-bold;
 }
