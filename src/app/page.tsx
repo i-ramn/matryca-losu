@@ -4,6 +4,7 @@ import { About } from '@/app/Home/About';
 import { Advantages } from '@/app/Home/Adnvantages';
 import { MoreAbout } from '@/app/Home/MoreAbout';
 import { SocialMedia } from '@/app/Home/SocialMedia';
+import { TwoWays } from './Home/TwoWays';
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Advantages />
       <MoreAbout />
       <SocialMedia />
+      <TwoWays />
     </>
   );
 }

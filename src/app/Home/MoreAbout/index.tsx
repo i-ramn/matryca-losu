@@ -7,7 +7,7 @@ import { moreAboutData } from './data';
 
 export const MoreAbout = () => {
   return (
-    <section className="bg-more-about-background bg-contain  bg-no-repeat pt-5 [background-position-x:-35vw] md:[background-position-x:0px] md:[background-position-y:5vh]">
+    <section className="bg-more-about-background bg-contain  bg-no-repeat pt-5 [background-position-x:-35vw] md:mb-16 md:[background-position-x:0px] md:[background-position-y:5vh]">
       <h2 className="text-center uppercase text-purple">
         <FormattedMessage id="more.about.itle" />
       </h2>
