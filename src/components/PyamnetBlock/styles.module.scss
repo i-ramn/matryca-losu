@@ -1,0 +1,50 @@
+.defaultButton {
+  @apply h-[50px] w-[173px] rounded-full transition-all;
+  &:active {
+    transition: 0.2s;
+    @apply translate-y-[1px];
+  }
+}
+
+.gradientButton {
+  @apply from-red via-orange to-yellow bg-gradient-to-r text-purple;
+  &:hover {
+    @apply ring-orange bg-gradient-to-br shadow-inner;
+  }
+  &:active {
+    @apply shadow-sm;
+  }
+}
+
+.commonButton {
+  @apply bg-purple text-white;
+
+  &:hover {
+    transition: 0.1s;
+    @apply shadow-lg;
+  }
+}
+
+.emptyGradientButtonContainer {
+  @apply rounded-full p-0.5 bg-orange-gradient;
+  &:hover {
+    @apply shadow-lg;
+  }
+  &:active {
+    @apply shadow-lg;
+  }
+}
+
+.emptyButtonContainer {
+  @apply rounded-full bg-purple p-0.5;
+  &:hover {
+    @apply shadow-lg;
+  }
+  &:active {
+    @apply shadow-lg;
+  }
+}
+
+.emptyButton {
+  @apply h-full w-full rounded-full bg-white;
+}

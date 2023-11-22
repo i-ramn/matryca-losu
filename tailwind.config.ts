@@ -23,6 +23,10 @@ const config: Config = {
         purple: '#270B3E',
         lightGray: '#D8D8D8',
         lightGray2: '#F2F2F2',
+        red: '#FF2927',
+        orange: '#FD6530',
+        yellow: '#FFC122',
+        lightOrange: '#FB8835',
       },
       translate: {
         0.3: '0.3px',
