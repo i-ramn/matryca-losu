@@ -1,7 +1,7 @@
 'use client';
-import { FC, ReactNode, useMemo } from 'react';
-import { FormattedMessage } from 'react-intl';
 import { MessageIds } from '@/types/i18n';
+import { FC, ReactNode } from 'react';
+import { FormattedMessage } from 'react-intl';
 import styles from './styles.module.scss';
 
 export enum PaymentButtons {
@@ -73,13 +73,13 @@ export const PaymnetBlock: FC<PaymnetBlockProps> = ({
       <div
         className={`flex h-full w-full flex-col items-center rounded-[55px] ${
           background || 'bg-white'
-        } gap-10 px-10 py-24 text-center text-purple`}
+        } gap-5 px-5 py-4 text-center text-purple lg:px-8 lg:py-10 xl:gap-10 xl:px-10 xl:py-24`}
       >
-        <h3 className={`font-bold ${titleStyle}`}>
+        <h3 className={`font-bold ${titleStyle} text-xl xl:text-2xl`}>
           <FormattedMessage id={titleId} />
         </h3>
         {children}
-        <h3 className={`text-4xl font-bold ${priceStyle}`}>{price}</h3>
+        <h3 className={`text-xl font-bold xl:text-4xl ${priceStyle}`}>{price}</h3>
         {submitButton(buttonType, onSubmit)}
       </div>
     </div>

@@ -8,7 +8,7 @@ const renderList = (string: string, length: number) => {
 
   for (let index = 1; index < length; index++) {
     elements.push(
-      <li className="list-inside list-disc text-2xl">
+      <li className="list-inside list-disc text-sm xl:text-2xl">
         <FormattedMessage key={index} id={`${string}${index}` as MessageIds} />
       </li>,
     );
@@ -19,7 +19,7 @@ const renderList = (string: string, length: number) => {
 
 export const Payments = () => {
   return (
-    <section className="grid-rows-fr-auto container grid grid-cols-3 gap-20">
+    <section className="lg:grid-rows-fr-auto container grid grid-cols-1 gap-5 md:grid-cols-3 xl:gap-20">
       <PaymnetBlock
         borderColor="bg-orange-gradient"
         background="bg-white"
@@ -28,11 +28,11 @@ export const Payments = () => {
         priceStyle="font-bold text-4xl text-lightOrange"
         buttonType={PaymentButtons.Gradient}
       >
-        <div className="flex flex-col gap-10">
-          <p className="text-xl">
+        <div className="flex flex-col gap-5 lg:gap-10">
+          <p className="text-sm xl:text-xl">
             <FormattedMessage id="payment-block.p1" />
           </p>
-          <h3 className="text-center font-bold">
+          <h3 className="text-center text-xl font-normal lg:font-bold">
             <FormattedMessage id="payment-block.subtitle" />
           </h3>
         </div>
@@ -45,18 +45,17 @@ export const Payments = () => {
         price="50 PLN"
         priceStyle="text-purple"
       >
-        <div className="flex flex-col gap-10 text-2xl">
-          <p>
+        <div className="flex flex-col gap-5 xl:gap-10">
+          <p className="text-sm xl:text-2xl">
             <FormattedMessage id="payment-plock2.p1" />
           </p>
-          <p>
+          <p className="text-sm xl:text-2xl">
             <FormattedMessage id="payment-plock2.p2" />
           </p>
         </div>
       </PaymnetBlock>
-
       <PaymnetBlock
-        className="col-start-3 row-start-1 row-end-3 max-h-[1246px]"
+        className="md:col-start-3 md:row-start-1 md:row-end-3 md:max-h-[85%]"
         borderColor="bg-orange-gradient"
         background="bg-white"
         titleId="payment-block.title3"
@@ -89,7 +88,7 @@ export const Payments = () => {
           <ul className="flex flex-col gap-2 text-start font-normal text-black">
             {renderList('payment-block5.list-', 5)}
           </ul>
-          <p className="text-2xl font-bold">
+          <p className="text-xl font-bold xl:text-2xl">
             <FormattedMessage id="payment-block5.stock" />
           </p>
         </div>
