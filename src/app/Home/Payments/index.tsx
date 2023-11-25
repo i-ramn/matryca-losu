@@ -37,7 +37,6 @@ export const Payments = () => {
           </h3>
         </div>
       </PaymnetBlock>
-
       <PaymnetBlock
         borderColor="bg-lightGray2"
         background="bg-lightGray2"

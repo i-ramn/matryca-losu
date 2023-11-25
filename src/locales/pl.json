@@ -12,6 +12,7 @@
   "ours": "Nasz",
   "purchase": "Kupić",
   "contact-with-us": "Skontaktuj sie z nami",
+  "calculator": "Kalkulator",
   "navigation.calculation": "Obliczenie",
   "navigation.сonformity": "Zgodność",
   "navigation.AboutTheMethod": "O metodzie",
@@ -89,5 +90,11 @@
   "payment-block5.list-2": "Dekodowanie zgodności",
   "payment-block5.list-3": "Pełne dekodowanie Matrixa",
   "payment-block5.list-4": "Ilość terminów weryfikacji jest nieograniczona",
-  "payment-block5.stock": "DOSTĘP NA 1 MIESIĄC"
+  "payment-block5.stock": "DOSTĘP NA 1 MIESIĄC",
+  "footer.faq": "FAQ",
+  "footer.contact": "Kontakt",
+  "footer.regulations": "Regulamin",
+  "footer.privacy-policy": "Polityka prywatnosci",
+  "footer.chose": "Wybierz parkiet",
+  "footer.what-is": "Czym jest Matryca Losu?"
 }

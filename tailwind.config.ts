@@ -1,5 +1,5 @@
-import plugin from 'tailwindcss/plugin';
 import type { Config } from 'tailwindcss';
+import plugin from 'tailwindcss/plugin';
 
 const config: Config = {
   content: [
@@ -15,6 +15,9 @@ const config: Config = {
         'home-people': 'url(/images/background-xl.png)',
         'more-about-background': 'url(/images/background-union.png)',
         phone: 'url(/images/phone.png)',
+        'footer-left': 'url(/images/footer-left.svg)',
+        'footer-right': 'url(/images/footer-right.svg)',
+        footer: 'url(/images/footer.png)',
       },
       maxWidth: {
         headerWidth: '1700px',
