@@ -1,14 +1,14 @@
+import Arrow from '@/public/icons/dropdownn-arrow.svg';
+import Image from 'next/image';
 import {
+  ChangeEvent,
   FC,
   InputHTMLAttributes,
-  ChangeEvent,
   useCallback,
-  useState,
-  useRef,
   useEffect,
+  useRef,
+  useState,
 } from 'react';
-import Image from 'next/image';
-import Arrow from '@/public/icons/dropdownn-arrow.svg';
 
 interface DefaultInputProps extends InputHTMLAttributes<HTMLInputElement> {
   label: string;
@@ -17,6 +17,8 @@ interface DefaultInputProps extends InputHTMLAttributes<HTMLInputElement> {
   onDropdownSelect?: (selectedValue: any) => void;
   name: string;
   className?: string;
+  isValid?: boolean;
+  validationMessage?: string;
 }
 
 export const DefaultInput: FC<DefaultInputProps> = ({
@@ -27,6 +29,8 @@ export const DefaultInput: FC<DefaultInputProps> = ({
   dropdownData,
   onDropdownSelect,
   className,
+  isValid = true,
+  validationMessage,
   ...rest
 }) => {
   const [shouldShowDropdown, setshouldShowDropdown] = useState<boolean>(false);
@@ -75,9 +79,9 @@ export const DefaultInput: FC<DefaultInputProps> = ({
         {label}
       </label>
       <div
-        className={`relative flex h-11 w-full justify-between rounded-full border-2 border-purple ${
+        className={`relative flex h-11 w-full justify-between rounded-full border-2 ${
           dropdown && 'cursor-pointer'
-        }`}
+        } ${isValid ? 'border-purple' : 'border-red'}`}
         onClick={() => setshouldShowDropdown((prevState) => !prevState)}
       >
         <input
@@ -114,6 +118,9 @@ export const DefaultInput: FC<DefaultInputProps> = ({
             </div>
           ))}
         </div>
+      )}
+      {validationMessage && (
+        <span className="absolute mt-[2px] text-xs text-rose-400">{validationMessage}</span>
       )}
     </div>
   );

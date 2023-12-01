@@ -1,7 +1,7 @@
 'use client';
+import Link from 'next/link';
 import { FC } from 'react';
 import { FormattedMessage } from 'react-intl';
-import Link from 'next/link';
 
 import { DefaultButton } from '@/components/Buttons/DefaultButton';
 import { buttonsData } from './buttonsData';
@@ -17,7 +17,7 @@ export const TopSection: FC = () => {
           <div className="mb-7 flex flex-col gap-10 md:mb-0 md:gap-5">
             {buttonsData.map((button) => (
               <Link key={button.id} href={button.href} className="w-fit">
-                <DefaultButton messageId={button.id} />
+                <DefaultButton size="lg" messageId={button.id} />
               </Link>
             ))}
           </div>

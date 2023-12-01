@@ -1,4 +1,5 @@
 import { FormValues, createInitialValues } from '@/helpers/createInitialValues';
+import * as yup from 'yup';
 
 import { useTranslate } from '@/hooks/useTranslate';
 
@@ -25,5 +26,12 @@ export const useFateForm = () => {
 
   const initialValues = createInitialValues(formValues);
 
-  return { formValues, initialValues };
+  const validationSchema = yup.object({
+    name: yup.string().required('Please enter a name'),
+    date: yup.string().required('Please enter a date'),
+    appeal: yup.string().required('Please select an appeal'),
+    gender: yup.string().required('Please select a gender'),
+  });
+
+  return { formValues, initialValues, validationSchema };
 };
