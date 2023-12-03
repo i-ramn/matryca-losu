@@ -2,6 +2,7 @@ import { Footer } from '@/components/Footer';
 import { Header } from '@/components/Header';
 import { INDER, INTER } from '@/constants/fonts';
 import { LanguageProvider } from '@/contexts/intlContext';
+import { Reduxprovider } from '@/layouts/ReduxProvider';
 import type { Metadata } from 'next';
 import './globals.css';
 
@@ -14,11 +15,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={`${INTER.variable} ${INDER.variable}`}>
       <body className="md:text-md text-2xl">
-        <LanguageProvider>
-          <Header />
-          {children}
-          <Footer />
-        </LanguageProvider>
+        <Reduxprovider>
+          {/* <PersistGate loading={null} persistor={persistor}>  */}
+          <LanguageProvider>
+            <Header />
+            {children}
+            <Footer />
+          </LanguageProvider>
+        </Reduxprovider>
       </body>
     </html>
   );
