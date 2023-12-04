@@ -5,7 +5,7 @@ import * as calculateActions from '@/app/Home/components/FreeCalculators/Fate/ac
 import * as calculateApi from '@/app/Home/components/FreeCalculators/Fate/api';
 
 interface ActionMapping {
-  [key: string]: (arg: string) => Promise<AxiosResponse<any, any>>;
+  [key: string]: (arg: string) => Promise<AxiosResponse>;
 }
 
 const apiCallsMapping = (action: AnyAction) => {

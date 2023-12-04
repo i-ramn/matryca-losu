@@ -2,6 +2,7 @@
 
 import { DefaultButton } from '@/components/Buttons/DefaultButton';
 import { DefaultInput } from '@/components/Input';
+import { Spinner } from '@/components/Spinner';
 import { useTranslate } from '@/hooks/useTranslate';
 import { DefaultState } from '@/store/rootReducer';
 import { MessageIds } from '@/types/i18n';
@@ -36,7 +37,9 @@ export const FateForm = () => {
   return (
     <>
       {isLoading ? (
-        <div className="h-5 w-5 bg-red" />
+        <div className="flex h-full w-full items-center justify-center">
+          <Spinner className="self-center" />
+        </div>
       ) : (
         <>
           <h2 className="mb-5 text-purple">

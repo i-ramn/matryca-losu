@@ -1,34 +1,37 @@
 'use client';
+import Image from 'next/image';
+import { useState } from 'react';
+import { useSelector } from 'react-redux';
+
 import MATRIX from '@/public/images/matrix.svg';
 import { DefaultState } from '@/store/rootReducer';
-import Image from 'next/image';
-import { useSelector } from 'react-redux';
-import { coordinates, mockedData } from './data';
+import { coordinates } from './data';
 
 export const Matrix = () => {
+  const [imageLoaded, setImageLoaded] = useState(false);
+
   const { combinations } = useSelector((state: DefaultState) => state.calculation);
 
-  const coordinatesKeys: { [key: string]: string } = coordinates;
+  const result = Object.keys(combinations ?? {}).map((key) => ({
+    position: combinations?.[key as keyof typeof combinations],
+    coordinates: coordinates[key as keyof typeof coordinates],
+  }));
 
-  const result = Object.keys(mockedData)?.map((key) => {
-    return { position: mockedData[key], coordinates: coordinates[key] };
-  });
-
-  console.log('result', result);
+  const handleImageLoad = () => {
+    setImageLoaded(true);
+  };
 
   return (
     <div className="relative w-full max-w-[900px]">
-      <Image src={MATRIX} alt="matrix" />
-      {result.map((el) => (
-        <div
-          className={`translate- absolute ${el.coordinates} text- lex items-center justify-center text-black`}
-        >
-          {el.position}
-        </div>
-      ))}
-      {/* <div className="translate- absolute left-[45.5%] top-[5.1%] flex h-[8.4%] w-[8.4%] items-center justify-center text-red">
-        {combinations?.b}
-      </div> */}
+      <Image src={MATRIX} alt="matrix" onLoad={handleImageLoad} />
+      {imageLoaded &&
+        result.map((el) => (
+          <div
+            className={`translate- absolute flex items-center justify-center text-black ${el.coordinates}`}
+          >
+            {el.position}
+          </div>
+        ))}
     </div>
   );
 };
