@@ -3,7 +3,7 @@ import * as yup from 'yup';
 
 import { useTranslate } from '@/hooks/useTranslate';
 import { useDispatch } from 'react-redux';
-import { GET_CALCULATIONS_REQUEST } from './actions';
+import { GET_CALCULATIONS_REQUEST } from '../actions';
 
 export const useFateForm = () => {
   const { handleTranslate } = useTranslate();

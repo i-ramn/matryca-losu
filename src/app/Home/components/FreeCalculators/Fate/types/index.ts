@@ -1,4 +1,4 @@
-interface Response {
+export interface Response {
   a: number;
   a1: number;
   a2: number;
