@@ -3,15 +3,15 @@ import MATRIX from '@/public/images/matrix.svg';
 import { DefaultState } from '@/store/rootReducer';
 import Image from 'next/image';
 import { useSelector } from 'react-redux';
-import { coordinates } from './data';
+import { coordinates, mockedData } from './data';
 
 export const Matrix = () => {
   const { combinations } = useSelector((state: DefaultState) => state.calculation);
 
   const coordinatesKeys: { [key: string]: string } = coordinates;
 
-  const result = Object.keys(combinations)?.map((key) => {
-    return { position: combinations[key], coordinates: coordinates[key] };
+  const result = Object.keys(mockedData)?.map((key) => {
+    return { position: mockedData[key], coordinates: coordinates[key] };
   });
 
   console.log('result', result);
@@ -21,7 +21,7 @@ export const Matrix = () => {
       <Image src={MATRIX} alt="matrix" />
       {result.map((el) => (
         <div
-          className={`translate- absolute ${el.coordinates} flex h-[8.4%] w-[8.4%] items-center justify-center text-black`}
+          className={`translate- absolute ${el.coordinates} text- lex items-center justify-center text-black`}
         >
           {el.position}
         </div>
