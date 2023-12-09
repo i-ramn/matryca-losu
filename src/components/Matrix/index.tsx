@@ -1,10 +1,10 @@
 'use client';
 import Image from 'next/image';
 import { useState } from 'react';
-import { useSelector } from 'react-redux';
 
 import MATRIX from '@/public/images/matrix.svg';
 import { DefaultState } from '@/store/rootReducer';
+import { useSelector } from 'react-redux';
 import { coordinates } from './data';
 
 export const Matrix = () => {
@@ -23,11 +23,11 @@ export const Matrix = () => {
 
   return (
     <div className="relative w-full max-w-[900px]">
-      <Image src={MATRIX} alt="matrix" onLoad={handleImageLoad} />
+      <Image unoptimized src={MATRIX} alt="matrix" onLoad={handleImageLoad} />
       {imageLoaded &&
         result.map((el) => (
           <div
-            className={`translate- absolute flex items-center justify-center text-black ${el.coordinates}`}
+            className={`translate- absolute flex items-center justify-center text-black ${el.coordinates} cursor-default`}
           >
             {el.position}
           </div>
