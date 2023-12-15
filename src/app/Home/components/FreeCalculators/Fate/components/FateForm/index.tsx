@@ -8,7 +8,6 @@ import { DefaultState } from '@/store/rootReducer';
 import { MessageIds } from '@/types/i18n';
 import { useFormik } from 'formik';
 import { useCallback } from 'react';
-import { FormattedMessage } from 'react-intl';
 import { useDispatch, useSelector } from 'react-redux';
 import { GET_CALCULATIONS_REQUEST } from '../../actions';
 import { useFateForm } from '../../hooks/useFateForm';
@@ -42,12 +41,6 @@ export const FateForm = () => {
         </div>
       ) : (
         <>
-          <h2 className="mb-5 text-purple">
-            <FormattedMessage id="home.free-calculator.fate.title" />
-          </h2>
-          <p>
-            <FormattedMessage id="home.free-calculator.fate.description" />
-          </p>
           <form
             onSubmit={formik.handleSubmit}
             className="grid w-full grid-cols-1 gap-x-28 md:grid-cols-2 md:gap-y-3"

@@ -96,5 +96,11 @@
   "footer.regulations": "Regulamin",
   "footer.privacy-policy": "Polityka prywatnosci",
   "footer.chose": "Wybierz parkiet",
-  "footer.what-is": "Czym jest Matryca Losu?"
+  "footer.what-is": "Czym jest Matryca Losu?",
+  "matrix.title": "Informacje o Tobie:",
+  "program.male-line": "Programy rodu linii męskiej",
+  "program.female-line": "Programy rodu linii żeńskiej",
+  "program.personal": "Osobiste przeznaczenie",
+  "program.social": "Socjalne przeznaczenie",
+  "program.spirit": "Duchowe przeznaczenie"
 }

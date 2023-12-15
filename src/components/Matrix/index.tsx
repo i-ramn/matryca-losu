@@ -12,7 +12,10 @@ export const Matrix = () => {
 
   const { combinations } = useSelector((state: DefaultState) => state.calculation);
 
-  const result = Object.keys(combinations ?? {}).map((key) => ({
+  const intermediateCoordinates =
+    combinations && Object.keys(combinations).filter((el) => Object.keys(coordinates).includes(el));
+
+  const result = intermediateCoordinates?.map((key) => ({
     position: combinations?.[key as keyof typeof combinations],
     coordinates: coordinates[key as keyof typeof coordinates],
   }));
@@ -22,10 +25,10 @@ export const Matrix = () => {
   };
 
   return (
-    <div className="relative w-full max-w-[900px]">
+    <div className="relative h-max w-full max-w-[900px]">
       <Image unoptimized src={MATRIX} alt="matrix" onLoad={handleImageLoad} />
       {imageLoaded &&
-        result.map((el) => (
+        result?.map((el) => (
           <div
             className={`translate- absolute flex items-center justify-center text-black ${el.coordinates} cursor-default`}
           >

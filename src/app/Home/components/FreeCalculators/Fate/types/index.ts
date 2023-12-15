@@ -87,6 +87,46 @@ export interface Response {
   yi4: number;
   yi5: number;
   yi6: number;
+  ca: number;
+  ca1: number;
+  ca2: number;
+  cb: number;
+  cb1: number;
+  cb2: number;
+  cc: number;
+  cc1: number;
+  cc2: number;
+  cd: number;
+  cd1: number;
+  cd2: number;
+  ce: number;
+  ce1: number;
+  ce2: number;
+  cf: number;
+  cf1: number;
+  cf2: number;
+  cg: number;
+  cg1: number;
+  cg2: number;
+  ch: number;
+  ch1: number;
+  ch2: number;
+  pa: number;
+  pa1: number;
+  pa2: number;
+  pb: number;
+  pb1: number;
+  pb2: number;
+  pc: number;
+  pc1: number;
+  pc2: number;
+  pd: number;
+  pd1: number;
+  pd2: number;
+  pe: number;
+  pe1: number;
+  pe2: number;
+  pf: number;
 }
 
 export interface Combinations {
