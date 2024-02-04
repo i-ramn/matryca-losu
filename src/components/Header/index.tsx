@@ -6,7 +6,7 @@ const navlinks: HeaderNavProps[] = [
   { href: RoutesEnum.Calculation, label: 'calculation' },
   { href: RoutesEnum.Conformity, label: 'сonformity' },
   { href: RoutesEnum.About, label: 'AboutTheMethod' },
-  { href: RoutesEnum.Blog, label: 'blog' },
+  // { href: RoutesEnum.Blog, label: 'blog' },
   { href: RoutesEnum.Buy, label: 'buy' },
 ];
 

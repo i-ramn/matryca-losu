@@ -21,17 +21,20 @@ export const Children: FC<ChildrenCalculatorProps> = ({}) => {
   });
 
   intl.formatMessage({ id: 'appeal' });
-  const handleDropdownSelect = useCallback((fieldName: string, selectedValue: string) => {
-    console.log(selectedValue);
-    console.log(fieldName);
+  const handleDropdownSelect = useCallback(
+    (fieldName: string, selectedValue: string) => {
+      console.log(selectedValue);
+      console.log(fieldName);
 
-    formik.handleChange({
-      target: {
-        name: fieldName,
-        value: selectedValue,
-      },
-    });
-  }, []);
+      formik.handleChange({
+        target: {
+          name: fieldName,
+          value: selectedValue,
+        },
+      });
+    },
+    [formik],
+  );
 
   return (
     <div>

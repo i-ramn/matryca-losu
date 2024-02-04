@@ -52,9 +52,11 @@ export const HeaderNav: FC<NavLinks> = ({ navLinks }) => {
             return (
               <Link
                 key={link.href}
+                scroll
                 className={`${
                   isActive ? styles.activeLink : styles.link
                 } border-b border-zinc-500 p-4 md:border-0 md:p-0`}
+                style={{ scrollBehavior: 'smooth' }}
                 href={link.href}
               >
                 {intl.formatMessage({ id: `navigation.${link.label}` as MessageIds })}
@@ -62,7 +64,12 @@ export const HeaderNav: FC<NavLinks> = ({ navLinks }) => {
             );
           })}
         </nav>
-        <DefaultButton className="hidden md:block" messageId="button.enter" variant="nav" />
+        <DefaultButton
+          size="lg"
+          className="hidden md:block"
+          messageId="button.enter"
+          variant="nav"
+        />
         <div className="block md:hidden">
           <Hamburger toggled={false} onToggle={toggleBurger} color="var(--main-gradient)" />
         </div>

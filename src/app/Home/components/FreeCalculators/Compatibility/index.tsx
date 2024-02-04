@@ -30,10 +30,9 @@ export const Compatibility: FC<CompatibilityProps> = ({}) => {
         className="grid w-full grid-cols-1 gap-x-28 md:grid-cols-2 md:gap-y-3"
       >
         {formValues.map((input, index) => (
-          <div>
+          <div key={input.name}>
             <p>{`${intl.formatMessage({ id: 'partner' })} ${index + 1}`}</p>
             <DefaultInput
-              key={index}
               label={intl.formatMessage({ id: 'date' })}
               name={`${input.name}`}
               value={formik.values[`${input.name}${index}`]}

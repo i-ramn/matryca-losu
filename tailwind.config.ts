@@ -42,7 +42,7 @@ const config: Config = {
         },
       },
       screens: {
-        '2xl': '1440px',
+        // '2xl': '1440px',
       },
       fontFamily: {
         inter: ['var(--font-inter)'],

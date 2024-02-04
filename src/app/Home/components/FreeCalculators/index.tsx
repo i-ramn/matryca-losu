@@ -7,10 +7,13 @@ interface FreeCalulatorsProps {}
 
 export const FreeCalulators: FC<FreeCalulatorsProps> = ({}) => {
   return (
-    <section className="container grid grid-cols-1 gap-16 py-16 lg:py-[70px]">
+    <section
+      id="calculation-section"
+      className="container grid grid-cols-1 gap-16 py-16 lg:py-[70px]"
+    >
       <FateCalculator />
-      <Compatibility />
-      <Children />
+      {/*<Compatibility />*/}
+      {/*<Children />*/}
     </section>
   );
 };

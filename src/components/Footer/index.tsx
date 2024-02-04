@@ -19,16 +19,16 @@ export const Footer = () => {
                 alt="logo"
               />
               <div className="hidden justify-around lg:flex">
-                {socialMedias.map(({ imageSrc, href }) => (
-                  <Link href={href}>
+                {socialMedias.map(({ imageSrc, href }, id) => (
+                  <Link href={href} key={id}>
                     <Image src={imageSrc} alt="social medial link" />
                   </Link>
                 ))}
               </div>
             </div>
             <ul className="hidden flex-col justify-around font-inter font-normal text-white last:mb-2 lg:flex">
-              {siteMap.map(({ href, title }) => (
-                <li>
+              {siteMap.map(({ href, title }, id) => (
+                <li key={id}>
                   <Link className="hover:text-purple" href={href}>
                     <FormattedMessage id={title} />
                   </Link>
@@ -45,8 +45,8 @@ export const Footer = () => {
             variant="nav"
           />
           <ul className="flex flex-col justify-between text-xs md:text-base lg:pt-16 lg:text-2xl xl:gap-2">
-            {footerNav.map(({ title, href }) => (
-              <li>
+            {footerNav.map(({ title, href }, id) => (
+              <li key={id}>
                 <Link href={href}>
                   <FormattedMessage id={title} />
                 </Link>

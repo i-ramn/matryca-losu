@@ -13,8 +13,11 @@ export const Advantages = () => {
       </h2>
       <div className="container grid grid-cols-2 justify-items-center gap-y-4 md:grid-cols-4 md:gap-y-10">
         {advantages.map(({ imageSrc, description }, id) => (
-          <div className="flex max-w-[221px] flex-col items-center justify-center gap-5 text-center">
-            <Image key={id} src={imageSrc} alt="" />
+          <div
+            key={id}
+            className="flex max-w-[221px] flex-col items-center justify-center gap-5 text-center"
+          >
+            <Image src={imageSrc} alt="" />
             <p className="leading-5 md:leading-8">
               <FormattedMessage id={description} />
             </p>

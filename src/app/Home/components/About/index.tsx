@@ -4,7 +4,7 @@ import { FormattedMessage } from 'react-intl';
 
 export const About = () => {
   return (
-    <section className="container pt-9">
+    <section id="about-section" className="container pt-9">
       <h2 className="mb-4 text-center uppercase md:mb-10 lg:text-left">
         <FormattedMessage id="home.about.title" />
       </h2>

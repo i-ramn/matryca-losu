@@ -1,8 +1,8 @@
 export enum RoutesEnum {
   Home = '/',
-  Calculation = '/calculation',
+  Calculation = '#calculation-section',
   Conformity = '/сonformity',
-  About = '/about',
-  Blog = '/blog',
-  Buy = '/buy',
+  About = '#about-section',
+  // Blog = '/blog',
+  Buy = '#buy-section',
 }

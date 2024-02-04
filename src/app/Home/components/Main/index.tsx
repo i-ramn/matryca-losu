@@ -10,7 +10,7 @@ export const TopSection: FC = () => {
   return (
     <>
       <section className="flex w-full bg-home-people bg-contain bg-no-repeat md:bg-cover md:bg-center xl:min-h-[800px]">
-        <div className="container flex flex-col items-center pt-7 md:items-start lg:pt-24">
+        <div className="container mb-20 flex flex-col items-center pt-7 md:items-start lg:pt-24">
           <h1 className="mb-44 max-w-[80%] text-center text-purple md:mb-14 md:max-w-xl md:text-left">
             <FormattedMessage id="home.calculation" />
           </h1>

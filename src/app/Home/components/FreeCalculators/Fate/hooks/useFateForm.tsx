@@ -15,16 +15,16 @@ export const useFateForm = () => {
       name: 'date',
       placeholder: handleTranslate('home.free-calculator.placeholder.year'),
     },
-    {
-      name: 'appeal',
-      placeholder: handleTranslate('home.free-calculator.placeholder.appeal'),
-      dropdown: ['male', 'female'],
-    },
-    {
-      name: 'gender',
-      placeholder: handleTranslate('home.free-calculator.placeholder.gender'),
-      dropdown: ['male', 'female'],
-    },
+    // {
+    //   name: 'appeal',
+    //   placeholder: handleTranslate('home.free-calculator.placeholder.appeal'),
+    //   dropdown: ['male', 'female'],
+    // },
+    // {
+    //   name: 'gender',
+    //   placeholder: handleTranslate('home.free-calculator.placeholder.gender'),
+    //   dropdown: ['male', 'female'],
+    // },
   ];
 
   const initialValues = createInitialValues(formValues);

@@ -10,19 +10,26 @@ export const LanguageContext = createContext<Language>({
 });
 
 export const LanguageProvider: FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [language, setLanguage] = useState(
-    localStorage.getItem(LocalStorageKey.SELECTED_LOCALE) || locales.PL.value,
-  );
+  const [language, setLanguage] = useState(() => {
+    if (typeof window !== 'undefined') {
+      return localStorage.getItem(LocalStorageKey.SELECTED_LOCALE) || locales.PL.value;
+    }
+    return locales.PL.value;
+  });
 
   useEffect(() => {
-    if (navigator.language.toLowerCase().includes('pl')) {
-      setLanguage(locales.PL.value);
+    if (typeof window !== 'undefined') {
+      if (navigator.language.toLowerCase().includes('pl')) {
+        setLanguage(locales.PL.value);
+      }
     }
   }, []);
 
   const selectLanguage = useCallback((selectedLanguage: string) => {
     setLanguage(selectedLanguage);
-    localStorage.setItem(LocalStorageKey.SELECTED_LOCALE, selectedLanguage);
+    if (typeof window !== 'undefined') {
+      localStorage.setItem(LocalStorageKey.SELECTED_LOCALE, selectedLanguage);
+    }
   }, []);
 
   const contextValue = useMemo(

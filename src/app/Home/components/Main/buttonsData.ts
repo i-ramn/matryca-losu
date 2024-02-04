@@ -8,6 +8,6 @@ interface ButtonsData {
 
 export const buttonsData: ButtonsData[] = [
   { id: 'button.calculate-online', href: RoutesEnum.Calculation },
-  { id: 'buttonn.calculate-complience', href: RoutesEnum.Conformity },
-  { id: 'button.calculate-child', href: RoutesEnum.Calculation },
+  // { id: 'buttonn.calculate-complience', href: RoutesEnum.Conformity },
+  // { id: 'button.calculate-child', href: RoutesEnum.Calculation },
 ];

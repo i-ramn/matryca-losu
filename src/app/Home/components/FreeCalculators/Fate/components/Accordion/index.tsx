@@ -43,6 +43,7 @@ export const Accordion = () => {
       {mockedData.map((element, id) => {
         return (
           <Dropdown
+            key={id}
             bgColor={id === 1 ? ColorEnum.secondary : ColorEnum.primary}
             onClick={() => handleDropdown(id)}
             isOpened={openDropdownId === id}

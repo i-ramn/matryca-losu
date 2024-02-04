@@ -28,8 +28,9 @@ export const Matrix = () => {
     <div className="relative h-max w-full max-w-[900px]">
       <Image unoptimized src={MATRIX} alt="matrix" onLoad={handleImageLoad} />
       {imageLoaded &&
-        result?.map((el) => (
+        result?.map((el, id) => (
           <div
+            key={id}
             className={`translate- absolute flex items-center justify-center text-black ${el.coordinates} cursor-default`}
           >
             {el.position}

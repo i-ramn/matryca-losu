@@ -43,7 +43,7 @@ export const Destiny: FC<DestinyProps> = ({ type = 'default', titleId, coordinat
         </div>
       </div>
     );
-  }, []);
+  }, [coordinates, type]);
 
   return (
     <div className="flex h-min items-center gap-5">

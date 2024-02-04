@@ -9,7 +9,7 @@ export const useTranslate = () => {
 
   const handleTranslate: HandleTranslateFn = useCallback(
     (id: MessageIds) => intl.formatMessage({ id: id }),
-    [],
+    [intl],
   );
 
   return { handleTranslate };

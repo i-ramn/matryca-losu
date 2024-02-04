@@ -16,6 +16,7 @@ export const FateForm = () => {
   const { isLoading } = useSelector((state: DefaultState) => state.calculation);
   const { handleTranslate } = useTranslate();
   const dispatch = useDispatch();
+
   const { formValues, initialValues, validationSchema, handleSubmit } = useFateForm();
 
   const formik = useFormik({
@@ -24,14 +25,17 @@ export const FateForm = () => {
     validationSchema,
   });
 
-  const handleDropdownSelect = useCallback((fieldName: string, selectedValue: string) => {
-    formik.handleChange({
-      target: {
-        name: fieldName,
-        value: selectedValue,
-      },
-    });
-  }, []);
+  const handleDropdownSelect = useCallback(
+    (fieldName: string, selectedValue: string) => {
+      formik.handleChange({
+        target: {
+          name: fieldName,
+          value: selectedValue,
+        },
+      });
+    },
+    [formik],
+  );
 
   return (
     <>
@@ -46,22 +50,20 @@ export const FateForm = () => {
             className="grid w-full grid-cols-1 gap-x-28 md:grid-cols-2 md:gap-y-3"
           >
             {formValues.map(({ name, placeholder, type, dropdown }, id) => (
-              <>
-                <DefaultInput
-                  key={name}
-                  label={handleTranslate(name as MessageIds)}
-                  placeholder={placeholder}
-                  type={type}
-                  dropdown={Array.isArray(dropdown)}
-                  dropdownData={dropdown}
-                  onDropdownSelect={(selectedValue) => handleDropdownSelect(name, selectedValue)}
-                  isValid={formik.touched[name] && formik.errors[name] ? false : true}
-                  validationMessage={
-                    formik.errors[name] && formik.touched[name] ? formik.errors[name] : ''
-                  }
-                  {...formik.getFieldProps(name)}
-                />
-              </>
+              <DefaultInput
+                key={id}
+                label={handleTranslate(name as MessageIds)}
+                placeholder={placeholder}
+                type={type}
+                dropdown={Array.isArray(dropdown)}
+                dropdownData={dropdown}
+                onDropdownSelect={(selectedValue) => handleDropdownSelect(name, selectedValue)}
+                isValid={!(formik.touched[name] && formik.errors[name])}
+                validationMessage={
+                  formik.errors[name] && formik.touched[name] ? formik.errors[name] : ''
+                }
+                {...formik.getFieldProps(name)}
+              />
             ))}
             <DefaultButton size="md" messageId="button.enter" type="submit" className="mt-6" />
           </form>
