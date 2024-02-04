@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const domain = 'http://167.172.106.133:5000';
+const domain = 'http://67.207.76.105:5000';
 
 const config = {
   baseURL: domain,

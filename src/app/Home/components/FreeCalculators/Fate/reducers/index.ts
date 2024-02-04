@@ -6,6 +6,7 @@ const defaultState: CalculationsDefaultState = {
   isLoading: false,
   errors: '',
   combinations: undefined,
+  username: undefined,
 };
 
 export const calculatorReducer = handleActions<CalculationsDefaultState, Combinations>(

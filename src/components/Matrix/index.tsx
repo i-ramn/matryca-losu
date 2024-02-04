@@ -33,7 +33,7 @@ export const Matrix = () => {
             key={id}
             className={`translate- absolute flex items-center justify-center text-black ${el.coordinates} cursor-default`}
           >
-            {el.position}
+            <span>{el.position}</span>
           </div>
         ))}
     </div>

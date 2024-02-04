@@ -5,15 +5,18 @@ import { createBlacklistFilter } from 'redux-persist-transform-filter';
 import { combineReducers } from 'redux';
 import { persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
+import { userDefaultState, userReducer as user } from '@/store/user/userReducer';
 
 const loginPageBlacklist = createBlacklistFilter('auth', ['errors']);
 
 export type DefaultState = {
   calculation: CalculationsDefaultState;
+  user: userDefaultState;
 };
 
 const rootReducer = combineReducers({
   calculation,
+  user,
 });
 
 const persistConfig = {

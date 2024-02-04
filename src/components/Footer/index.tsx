@@ -26,24 +26,18 @@ export const Footer = () => {
                 ))}
               </div>
             </div>
-            <ul className="hidden flex-col justify-around font-inter font-normal text-white last:mb-2 lg:flex">
-              {siteMap.map(({ href, title }, id) => (
-                <li key={id}>
-                  <Link className="hover:text-purple" href={href}>
-                    <FormattedMessage id={title} />
-                  </Link>
-                </li>
-              ))}
-            </ul>
+            {/*<ul className="hidden flex-col justify-around font-inter font-normal text-white last:mb-2 lg:flex">*/}
+            {/*  {siteMap.map(({ href, title }, id) => (*/}
+            {/*    <li key={id}>*/}
+            {/*      <Link className="hover:text-purple" href={href}>*/}
+            {/*        <FormattedMessage id={title} />*/}
+            {/*      </Link>*/}
+            {/*    </li>*/}
+            {/*  ))}*/}
+            {/*</ul>*/}
           </div>
         </div>
         <div className="-ml-14 flex w-3/4 flex-col items-center gap-0 bg-footer-right bg-contain bg-no-repeat pr-20 pt-[5%] text-end font-inter font-normal text-purple lg:items-end lg:gap-7 xl:pt-16">
-          <DefaultButton
-            className="hidden xl:block"
-            messageId="button.enter"
-            size="sm"
-            variant="nav"
-          />
           <ul className="flex flex-col justify-between text-xs md:text-base lg:pt-16 lg:text-2xl xl:gap-2">
             {footerNav.map(({ title, href }, id) => (
               <li key={id}>
@@ -53,6 +47,12 @@ export const Footer = () => {
               </li>
             ))}
           </ul>
+          <DefaultButton
+            className="hidden xl:block"
+            messageId="button.enter"
+            size="sm"
+            variant="nav"
+          />
         </div>
       </div>
     </footer>

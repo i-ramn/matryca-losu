@@ -25,7 +25,7 @@ export const FateCalculator = () => {
       {combinations ? (
         <section>
           <Accordion />
-          <div className="mb-9 mt-52 flex items-center justify-between">
+          <div className="mb-9 mt-52 flex flex-col items-center justify-center gap-10 lg:flex-row lg:justify-between lg:gap-0">
             <Chakras />
             <Matrix />
           </div>

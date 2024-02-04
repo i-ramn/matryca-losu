@@ -18,9 +18,17 @@ interface DropdownProps {
   disabled?: boolean;
   isOpened?: boolean;
   bgColor: ColorEnum;
+  title: string;
 }
 
-export const Dropdown: FC<DropdownProps> = ({ isOpened, content, onClick, disabled, bgColor }) => {
+export const Dropdown: FC<DropdownProps> = ({
+  isOpened,
+  content,
+  onClick,
+  disabled,
+  bgColor,
+  title,
+}) => {
   return (
     <>
       <div
@@ -34,7 +42,7 @@ export const Dropdown: FC<DropdownProps> = ({ isOpened, content, onClick, disabl
           }`}
           onClick={disabled ? () => {} : onClick}
         >
-          <p>CECHY OSOBOWE</p>
+          <p>{title}</p>
           {disabled ? (
             <Image src={bgColor === ColorEnum.secondary ? FilledLocker : Locker} alt="" />
           ) : (

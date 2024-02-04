@@ -7,21 +7,27 @@ import { useTranslate } from '@/hooks/useTranslate';
 import { DefaultState } from '@/store/rootReducer';
 import { MessageIds } from '@/types/i18n';
 import { useFormik } from 'formik';
-import { useCallback } from 'react';
+import { useCallback, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { GET_CALCULATIONS_REQUEST } from '../../actions';
 import { useFateForm } from '../../hooks/useFateForm';
+import { SET_USER_NAME } from '@/store/user/userActions';
 
 export const FateForm = () => {
   const { isLoading } = useSelector((state: DefaultState) => state.calculation);
   const { handleTranslate } = useTranslate();
   const dispatch = useDispatch();
 
-  const { formValues, initialValues, validationSchema, handleSubmit } = useFateForm();
+  const [val, setVal] = useState('');
+
+  const { formValues, initialValues, validationSchema, formatText } = useFateForm();
 
   const formik = useFormik({
     initialValues,
-    onSubmit: async (val) => dispatch(GET_CALCULATIONS_REQUEST(val.date)),
+    onSubmit: async (val) => {
+      dispatch(GET_CALCULATIONS_REQUEST(val.date));
+      dispatch(SET_USER_NAME(val.name));
+    },
     validationSchema,
   });
 
@@ -62,7 +68,20 @@ export const FateForm = () => {
                 validationMessage={
                   formik.errors[name] && formik.touched[name] ? formik.errors[name] : ''
                 }
-                {...formik.getFieldProps(name)}
+                onChange={(e) => {
+                  const fieldName = e.target.name;
+                  const formattedText = formatText(e.target.value) as string;
+
+                  if (fieldName === 'date') {
+                    if (formattedText.match(/^(\d{0,2}\.?\d{0,2}\.?\d{0,4})?$/)) {
+                      formik.setFieldValue('date', formattedText);
+                    }
+                  } else {
+                    formik.handleChange(e);
+                  }
+                }}
+                name={name}
+                value={formik.values[name]}
               />
             ))}
             <DefaultButton size="md" messageId="button.enter" type="submit" className="mt-6" />

@@ -38,8 +38,8 @@ export const siteMap: FooterNav[] = [
 ];
 
 export const footerNav: FooterNav[] = [
-  { title: 'calculator', href: '' },
-  { title: 'navigation.AboutTheMethod', href: '' },
-  { title: 'footer.chose', href: '' },
-  { title: 'footer.what-is', href: '' },
+  { title: 'calculator', href: '#calculation-section' },
+  { title: 'navigation.AboutTheMethod', href: '#about-section' },
+  // { title: 'footer.chose', href: '' },
+  // { title: 'footer.what-is', href: '' },
 ];

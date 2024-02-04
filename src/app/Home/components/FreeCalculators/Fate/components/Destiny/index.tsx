@@ -7,7 +7,7 @@ export const DestinyBlock = () => {
 
   return (
     <div className="flex flex-col gap-10">
-      <div className="flex justify-evenly">
+      <div className="flex flex-wrap justify-evenly gap-10 md:gap-0">
         <Destiny
           coordinates={[combinations?.pa, combinations?.pa1, combinations?.pa2]}
           titleId="program.male-line"
@@ -19,7 +19,7 @@ export const DestinyBlock = () => {
           type="inline"
         />
       </div>
-      <div className="flex justify-between">
+      <div className="flex flex-wrap justify-between gap-10 md:gap-0">
         <Destiny
           coordinates={[combinations?.pc, combinations?.pc1, combinations?.pc2]}
           titleId="program.personal"

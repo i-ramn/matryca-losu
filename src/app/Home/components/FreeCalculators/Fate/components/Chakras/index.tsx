@@ -8,7 +8,7 @@ export const Chakras = () => {
   const { chakraData } = useChakraData();
 
   return (
-    <div className="w-full">
+    <div className="flex w-full flex-col items-center">
       {chakraData.map(({ color, name, options }, id) => {
         return (
           <ChakraLine

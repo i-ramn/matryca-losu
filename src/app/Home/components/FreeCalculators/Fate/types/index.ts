@@ -137,4 +137,5 @@ export interface CalculationsDefaultState {
   combinations?: Response;
   isLoading: boolean;
   errors: string;
+  username?: string;
 }
