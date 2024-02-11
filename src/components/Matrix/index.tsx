@@ -26,7 +26,7 @@ export const Matrix = () => {
 
   return (
     <div className="relative h-max w-full max-w-[900px]">
-      <Image unoptimized src={MATRIX} alt="matrix" onLoad={handleImageLoad} />
+      <Image draggable={false} unoptimized src={MATRIX} alt="matrix" onLoad={handleImageLoad} />
       {imageLoaded &&
         result?.map((el, id) => (
           <div
